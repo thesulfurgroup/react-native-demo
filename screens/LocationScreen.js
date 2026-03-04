@@ -117,23 +117,31 @@ class LocationScreenInternal extends React.Component {
         this.setState({ data, loading });
       }
     } catch (err) {
-      console.log('catch', err);
+      if (__DEV__) {
+        console.log('Request failed', err);
+      }
     }
   }
 
   async doQuery(payload) {
     try {
+      const token = ((Constants.manifest && Constants.manifest.extra) || {}).datoApiToken;
+      if (!token) {
+        throw new Error('Missing DatoCMS API token configuration.');
+      }
       return await fetch('https://graphql.datocms.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           Accept: 'application/json',
-          Authorization: `Bearer ${Constants.manifest.extra.datoApiToken}`
+          Authorization: `Bearer ${token}`
         },
         body: JSON.stringify(payload)
       }).then(res => res.json());
     } catch (error) {
-      console.log('QUERY ERROR', error, 'on query', payload);
+      if (__DEV__) {
+        console.log('QUERY ERROR', error);
+      }
       throw error;
     }
   }

@@ -1,11 +1,11 @@
 import { ActionSheetIOS, Platform, Linking } from 'react-native';
 
 function getAppleMapsDirectionsURL(address) {
-  return `http://maps.apple.com/?daddr=${address}&dirflg=d`;
+  return `https://maps.apple.com/?daddr=${address}&dirflg=d`;
 }
 
 function getGoogleMapsDirectionsURL(address) {
-  return `http://maps.google.com/?daddr=${address}`;
+  return `https://maps.google.com/?daddr=${address}`;
 }
 
 export default function(address) {
