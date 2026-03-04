@@ -62,7 +62,9 @@ export default class App extends React.Component {
         ]
       });
     } catch (e) {
-      console.log(e);
+      if (__DEV__) {
+        console.log(e);
+      }
     } finally {
       this.setState({ appIsReady: true });
     }

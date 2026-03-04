@@ -45,19 +45,19 @@ const Sponsors = () => {
       <View style={styles.sponsorTier}>
         <Sponsor url={'https://aws.amazon.com/'} image={Images.amazon} isLow />
         <Sponsor
-          url={'http://reactnative.training/'}
+          url={'https://reactnative.training/'}
           image={Images.training}
           isLow
         />
         <Sponsor url={'https://rangle.io/'} image={Images.rangle} isLow />
         <Sponsor url={'https://gudog.co.uk/'} image={Images.gudog} isLow />
         <Sponsor
-          url={'http://www.oregon4biz.com'}
+          url={'https://www.oregon4biz.com'}
           image={Images.businessOregon}
           isLow
         />
         <Sponsor
-          url={'http://www.healthsparq.com/'}
+          url={'https://www.healthsparq.com/'}
           image={Images.healthsparq}
           isLow
         />
@@ -86,14 +86,14 @@ const Sponsors = () => {
           image={Images.instrument}
           isLow
         />
-        <Sponsor url={'http://www.qlik.com/us/'} image={Images.qlik} />
+        <Sponsor url={'https://www.qlik.com/us/'} image={Images.qlik} />
         <Sponsor url={'https://callstack.io/'} image={Images.callstack} isLow />
         <Sponsor url={'https://www.mlssoccer.com/'} image={Images.mls} isLow />
       </View>
 
       <Text style={styles.sponsorTierTitle}>Additional Sponsors</Text>
       <View style={styles.sponsorTier}>
-        <Sponsor url={'http://www.qlik.com/us/'} image={Images.qlikCoffee} />
+        <Sponsor url={'https://www.qlik.com/us/'} image={Images.qlikCoffee} />
       </View>
     </View>
   );

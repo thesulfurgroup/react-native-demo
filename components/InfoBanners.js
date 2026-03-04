@@ -26,7 +26,7 @@ export class SlackBanner extends React.PureComponent {
         <RoundedButton
           text="Join the IR Slack Community"
           onPress={() => {
-            WebBrowser.openBrowserAsync('http://community.infinite.red');
+            WebBrowser.openBrowserAsync('https://community.infinite.red');
           }}
           style={slackStyles.button}
         />

@@ -22,7 +22,13 @@ First colone this repo
 
 #### `Set DatoCMS API token env variable`
 
-Edit the `app.json` file and add your API token in `datoApiToken`.
+Set your API token as an environment variable before running Expo:
+
+```bash
+export DATO_API_TOKEN=your_token_here
+```
+
+The app reads `DATO_API_TOKEN` through `app.config.js` and injects it into Expo `extra` config at build time.
 You can find your [DatoCMS](https://datocms.com) API token in the Admin area > API tokens section.
 
 ### `Install dependencies and run`
